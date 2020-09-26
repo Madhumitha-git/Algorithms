@@ -1,0 +1,23 @@
+EUCLID'S ALGORITHM:
+          GCD of two numbers is the largest number that divides both of them. A simple way to find GCD is to factorize both numbers and multiply common factors.
+
+STEPS:
+
+  Step 1 If n = 0, return m and stop; otherwise go to Step 2
+
+  Step 2 Divide m by n and assign the value of the remainder to r
+
+  Step 3 Assign the value of n to m and the value of r to n. Go to Step 1.
+  
+  ALGORITHM:
+      
+  function gcd(a, b) {
+  if (b == 0)
+    return a;
+  else
+    return gcd(b, (a % b));
+}
+
+EXAMPLE:
+
+      gcd(60,24) = gcd(24,12) = gcd(12,0) = 12
